@@ -211,6 +211,10 @@ df0produksi1 = df0produksi_indexed.loc["0"]
 listnegara0 = list(df0produksi1["kode_negara"])
 
 st.markdown("**Data Negara dengan Produksi 0 Tahun-T:**")
+listnama0 = []
+listkode0 = []
+listregion0 = []
+listsubregion0 = []
 
 for negara0 in listnegara0:         #loop pada negara0 di list negara dengan produksi 0 tahun T
     for negara in data:                 #loop pada tiap negara di file json
@@ -221,16 +225,21 @@ for negara0 in listnegara0:         #loop pada negara0 di list negara dengan pro
         else:
             nama0 = listoftp[0]
             nama0 = nama0[1]
+            listnama0.append(nama0)
             kode0 = listoftp[2]
             kode0 = kode0[1]
+            listkode0.append(kode0)
             region0 = listoftp[5]
             region0 = region0[1]
+            listregion0.append(region0)
             subregion0 = listoftp[6]
             subregion0 = subregion0[1]
-            st.write("Nama Negara: ",nama0)
-            st.write("Kode Negara: ",negara0)
-            st.write("Region Negara: ",region0)
-            st.write("Subregion Negara: ",subregion0)
+            listsubregion0.append(subregion0)
+
+dfsoal40 = {"nama_negara":listnama0,"Kode_negara":listkode0, "region_negara":listregion0,"subregion_negara":listsubregion0} #membuat 4 list ke bentuk dataframe
+datasoal40 = pd.DataFrame(dfsoal40)
+datasoal40jadi = datasoal40.set_index("nama_negara") 
+st.dataframe(datasoal40jadi)
 
             """
 #Negara Produksi 0 Kumulatif
