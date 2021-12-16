@@ -9,7 +9,8 @@ from matplotlib import cm
 import json
 import streamlit as st
 
-header = st.beta_container()
+st.title("Ujian Akhir Semester Program Komputasi")
+st.header("Bernard Susanto/12220123")
 
 listnamanegara = list()
 listkodenegara = list()
@@ -28,7 +29,7 @@ for negara in data:                 #loop pada tiap negara di file json
 kamus = dict(zip(listnamanegara,listkodenegara))        #memasangkan masing-masing nama dan kode negara pada dictionary
 
 #Soal 1  
-print("Grafik Produksi Negara pada setiap Tahun")
+st.subheader("Grafik Produksi Negara pada Setiap Tahun")
 masukanuser = st.text_input("Masukkan Nama Negara: ")
 
 if masukanuser in listnamanegara:
