@@ -41,7 +41,11 @@ df.produksi = df.produksi.astype(int)           #Menghilangkan titik pada data p
 df_indexed = df.set_index("kode_negara")        #Mengubah index menjadi kode negara
 datasoal1 = df_indexed.loc[kodeinput]            #Men-slice data hanya sesuai input negara dari user
 
-st.pyplot(datasoal1)
+fig, ax = plt.subplots()
+ax.bar(datasoal1["tahun"], datasoal1["produksi"])
+ax.set_xlabel("tahun", fontsize=12)
+ax.set_ylabel("produksi", fontsize=12)
+st.pyplot(fig)
 #datasoal1.plot(x='tahun',y='produksi', kind = 'line', figsize = (20,10))
 #plt.title("Grafik Produksi vs Tahun")
 #plt.show()
