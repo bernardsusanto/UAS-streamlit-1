@@ -35,7 +35,7 @@ masukanuser = st.text_input("Masukkan Nama Negara: ")
 if masukanuser in listnamanegara:
     kodeinput = kamus[masukanuser]   #kode negara yang tepat diassign sesuai dengan nama negara masukan user
 else:
-    print("Nama negara tidak dapat ditemukan")    
+    st.error("Nama negara tidak dapat ditemukan")    
 
 df = pd.read_csv('produksi_minyak_mentah.csv')
 df.produksi = df.produksi.astype(int)           #Menghilangkan titik pada data produksi
