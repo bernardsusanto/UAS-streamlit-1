@@ -230,7 +230,7 @@ for negara0 in listnegara0:         #loop pada negara0 di list negara dengan pro
             st.write("Nama Negara: ",nama0)
             st.write("Kode Negara: ",negara0)
             st.write("Region Negara: ",region0)
-            st.write("Subregion Negara: ",subregion0,"\n")
+            st.write("Subregion Negara: ",subregion0)
 
             """
 #Negara Produksi 0 Kumulatif
