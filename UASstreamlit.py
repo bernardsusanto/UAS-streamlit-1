@@ -236,7 +236,7 @@ for negara0 in listnegara0:         #loop pada negara0 di list negara dengan pro
             subregion0 = subregion0[1]
             listsubregion0.append(subregion0)
 
-dfsoal40 = {"Nama negara":listnama0,"Kode negara":listkode0, "region negara":listregion0,"subregion negara":listsubregion0} #membuat 4 list ke bentuk dataframe
+dfsoal40 = {"Nama negara":listnama0,"Kode negara":listkode0, "Region negara":listregion0,"Subregion negara":listsubregion0} #membuat 4 list ke bentuk dataframe
 datasoal40 = pd.DataFrame(dfsoal40)
 datasoal40jadi = datasoal40.set_index("Nama negara") 
 st.dataframe(datasoal40jadi)
