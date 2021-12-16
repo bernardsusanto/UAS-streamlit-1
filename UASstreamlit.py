@@ -124,7 +124,7 @@ for negara in data:                 #loop pada tiap negara di file json
         st.write("===============================================")
         st.write("Nama Negara: ",namaterbesar,#,"Kode Negara: ",kodeterbesar)
         st.write("Region Negara: ",regionterbesar)
-        st.write("Subregion Negara: ",subregionterbesar,"\n")
+        st.write("Subregion Negara: ",subregionterbesar)
         
 """
 #Negara Produksi terbesar kumulatif
