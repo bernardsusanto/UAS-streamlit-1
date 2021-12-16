@@ -91,7 +91,7 @@ datasoal3top = datasoal3.head(int(Bnegarak))     #Menampilkan hanya data B-besar
 
 cmap_name = 'tab20'
 cmap = cm.get_cmap(cmap_name)
-colors = cmap.colors[:len(datasoal2["Kode_Negara"])]
+colors = cmap.colors[:len(datasoal3top["Kode_Negara"])]
 fig, ax = plt.subplots()
 ax.bar(datasoal3top["Kode_Negara"],datasoal3top["Kumulatif_Produksi"],color=colors)
 ax.set_xlabel("Kode Negara", fontsize=12)
