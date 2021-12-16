@@ -128,7 +128,7 @@ for negara in data:                 #loop pada tiap negara di file json
         
 #Negara Produksi terbesar kumulatif
 datasoal3b = datasoal3.head(1)               #Mencari negara dengan produksi kumulatif terbesar
-datakterbesar = datasoal3b["Kode Negara"]       #Menentukan kode negaranya
+datakterbesar = datasoal3b["Kode_Negara"]       #Menentukan kode negaranya
 kodetercari1 = datakterbesar.values[0]
 
 for negara in data:                 #loop pada tiap negara di file json
