@@ -66,7 +66,7 @@ st.pyplot(fig)
 
 #Soal 3
 st.subheader("Grafik Produksi Kumulatif Minyak Mentah B-Besar Negara")
-Bnegarak = st.number_input("Masukkan berapa besar negara: ",min_value=1,max_value=200)
+Bnegarak = st.number_input("Masukkan jumlah besar negara: ",min_value=1,max_value=200)
 
 listkodenegara1 = list(dftahun["kode_negara"])  #Mengambil deretan kode negara dari data di soal sebelumnya
                                                 #Dikarenakan ketiadaan negara Afghanistan pada file csv yang diberikan
