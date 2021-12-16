@@ -95,7 +95,7 @@ colors = cmap.colors[:len(datasoal3top["Kode_Negara"])]
 fig, ax = plt.subplots()
 ax.bar(datasoal3top["Kode_Negara"],datasoal3top["Kumulatif_Produksi"],color=colors)
 ax.set_xlabel("Kode Negara", fontsize=12)
-ax.set_ylabel("Kumulatif Produksi", fontsize=12)
+ax.set_ylabel("Kumulatif Produksi (x10^7)", fontsize=12)
 st.pyplot(fig)
 
 
