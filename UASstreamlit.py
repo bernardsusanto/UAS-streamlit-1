@@ -32,9 +32,7 @@ kamus = dict(zip(listnamanegara,listkodenegara))        #memasangkan masing-masi
 st.subheader("Grafik Produksi Minyak Mentah Negara pada Setiap Tahun")
 masukanuser = st.text_input("Masukkan Nama Negara: ")
 
-if masukanuser == None:
-    st.error("Silakan masukkan nama negara")
-elif masukanuser in listnamanegara:
+if masukanuser in listnamanegara:
     kodeinput = kamus[masukanuser]   #kode negara yang tepat diassign sesuai dengan nama negara masukan user
 else:
     print("Nama negara tidak dapat ditemukan")    
