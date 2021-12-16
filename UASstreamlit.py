@@ -121,11 +121,11 @@ for negara in data:                 #loop pada tiap negara di file json
         subregionterbesar = listoftp[6]
         subregionterbesar = subregionterbesar[1]
         st.markdown("**Data Negara dengan Produksi Tahun-T Terbesar:**")
-        print("===============================================")
+        st.write("===============================================")
         st.write("Nama Negara: ",namaterbesar)
-        print("Kode Negara: ",kodeterbesar)
-        print("Region Negara: ",regionterbesar)
-        print("Subregion Negara: ",subregionterbesar,"\n")
+        st.write("Kode Negara: ",kodeterbesar)
+        st.write("Region Negara: ",regionterbesar)
+        st.write("Subregion Negara: ",subregionterbesar,"\n")
         
 """
 #Negara Produksi terbesar kumulatif
