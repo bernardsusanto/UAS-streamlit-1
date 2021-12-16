@@ -58,8 +58,11 @@ dftahun = df_indexed.loc[int(tahuninput)]       #Men-slice data hanya sesuai inp
 produksi_sorted = dftahun.sort_values(["produksi"], ascending = False)  #mengurutkan data produksi dari terbesar ke terkecil
 datasoal2 = produksi_sorted.head(int(Bnegara))  #mengambil data B-besar negara inputan user
 
+cmap_name = 'tab20'
+cmap = cm.get_cmap(cmap_name)
+colors = cmap.colors[:len(datasoal2["kode_negara"])]
 fig, ax = plt.subplots()
-ax.bar(datasoal2["kode_negara"], datasoal2["produksi"])
+ax.bar(datasoal2["kode_negara"], datasoal2["produksi"],color=colors)
 ax.set_xlabel("Kode Negara", fontsize=12)
 ax.set_ylabel("Produksi", fontsize=12)
 st.pyplot(fig)
