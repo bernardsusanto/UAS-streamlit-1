@@ -29,7 +29,7 @@ for negara in data:                 #loop pada tiap negara di file json
 kamus = dict(zip(listnamanegara,listkodenegara))        #memasangkan masing-masing nama dan kode negara pada dictionary
 
 #Soal 1  
-st.subheader("Grafik Produksi Negara pada Setiap Tahun")
+st.subheader("Grafik Produksi Minyak Mentah Negara pada Setiap Tahun")
 masukanuser = st.text_input("Masukkan Nama Negara: ")
 
 if masukanuser in listnamanegara:
@@ -49,7 +49,7 @@ ax.set_ylabel("Produksi", fontsize=12)
 st.pyplot(fig)
 
 #Soal 2
-st.subheader("Grafik B-besar Negara pada Tahun Tertentu")
+st.subheader("Grafik Produksi Minyak Mentah B-besar Negara pada Tahun Tertentu")
 Bnegara = st.number_input("Masukkan berapa besar negara: ",min_value=1,max_value=200)
 tahuninput = st.number_input("Masukkan tahun (1971-2015): ",min_value=1971,max_value=2015)
 
@@ -64,10 +64,9 @@ ax.set_xlabel("Kode Negara", fontsize=12)
 ax.set_ylabel("Produksi", fontsize=12)
 st.pyplot(fig)
 
-"""
 #Soal 3
-print("\nGrafik B-Besar Negara Secara Produksi Kumulatif")
-Bnegara_k = input("Masukkan berapa besar negara: ")
+st.subheader("Grafik Produksi Kumulatif Minyak Mentah B-Besar Negara")
+Bnegara_k = st.number_input("Masukkan berapa besar negara: ",min_value=1,max_value=200)
 
 listkodenegara1 = list(dftahun["kode_negara"])  #Mengambil deretan kode negara dari data di soal sebelumnya
                                                 #Dikarenakan ketiadaan negara Afghanistan pada file csv yang diberikan
@@ -87,10 +86,13 @@ datasoal3 = pd.DataFrame(dfsoal3)      #Membuat 2 list tadi ke dalam dataframe
 datasoal3 = datasoal3.sort_values(["Kumulatif Produksi"],ascending = False) #Mengatur agar urutan dari kumulatif terbesar
 datasoal3top = datasoal3.head(int(Bnegara_k))     #Menampilkan hanya data B-besar negara berdasarkan kumulatif
 
-datasoal3top.plot(x='Kode Negara',y='Kumulatif Produksi', kind = 'bar', figsize = (20,10))
-plt.title("Grafik Kumulatif Produksi B-Besar Negara")
-plt.show()
+fig, ax = plt.subplots()
+ax.bar(datasoal3top["Kode Negara"], datasoal3top["Kumulatif Produksi"])
+ax.set_xlabel("Kode Negara", fontsize=12)
+ax.set_ylabel("Kumulatif Produksi", fontsize=12)
+st.pyplot(fig)
 
+"""
 #Soal 4
 print("\nInformasi tambahan")
 tahuninput1 = input("Masukkan tahun(1971-2015): ")
