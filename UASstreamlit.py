@@ -122,7 +122,7 @@ for negara in data:                 #loop pada tiap negara di file json
         subregionterbesar = subregionterbesar[1]
         st.markdown("**Data Negara dengan Produksi Tahun-T Terbesar:**")
         st.write("===============================================")
-        st.write("Nama Negara: ",namaterbesar,\n,"Kode Negara: ",kodeterbesar)
+        st.write("Nama Negara: ",namaterbesar,#,"Kode Negara: ",kodeterbesar)
         st.write("Region Negara: ",regionterbesar)
         st.write("Subregion Negara: ",subregionterbesar,"\n")
         
