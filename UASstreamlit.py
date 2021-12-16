@@ -120,7 +120,7 @@ for negara in data:                 #loop pada tiap negara di file json
         regionterbesar = regionterbesar[1]
         subregionterbesar = listoftp[6]
         subregionterbesar = subregionterbesar[1]
-        print("\nData Negara dengan Produksi Tahun-T Terbesar:")
+        st.markdown("**Data Negara dengan Produksi Tahun-T Terbesar:**")
         print("===============================================")
         st.write("Nama Negara: ",namaterbesar)
         print("Kode Negara: ",kodeterbesar)
