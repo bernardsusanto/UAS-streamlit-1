@@ -241,7 +241,7 @@ datasoal40 = pd.DataFrame(dfsoal40)
 datasoal40jadi = datasoal40.set_index("nama_negara") 
 st.dataframe(datasoal40jadi)
 
-            """
+"""
 #Negara Produksi 0 Kumulatif
 df0kproduksi_indexed = datasoal3.set_index("Kumulatif Produksi")  
 df0kproduksi1 = df0kproduksi_indexed.loc[0]
