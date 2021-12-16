@@ -95,7 +95,7 @@ st.pyplot(fig)
 
 #Soal 4
 st.subheader("Informasi Tambahan")
-tahuninput1 = st.number_input("Masukkan tahun(1971-2015): ",min_value=1971,max_value=2015)
+tahuninput1 = st.number_input("Masukkan tahun-T (1971-2015): ",min_value=1971,max_value=2015)
 
 df_indexed = df.set_index("tahun")              #Mengubah index menjadi tahun
 dftahun = df_indexed.loc[int(tahuninput1)]       #Men-slice data hanya sesuai input tahun dari user
@@ -151,7 +151,6 @@ for negara in data:                 #loop pada tiap negara di file json
         st.write("Region Negara: ",regionkterbesar)
         st.write("Subregion Negara: ",subregionkterbesar)
 
-        """
 #Negara Produksi terkecil tahun-T
 dftahun1 = dftahun[dftahun["produksi"]!=0]    #Menghilangkan 0 pada data produksi
 datacarikode2 = dftahun1.sort_values(["produksi"],ascending = True) #Mengatur agar urutan dari produksi terkecil
@@ -173,13 +172,12 @@ for negara in data:                 #loop pada tiap negara di file json
         regionterkecil = regionterkecil[1]
         subregionterkecil = listoftp[6]
         subregionterkecil = subregionterkecil[1]
-        print("\nData Negara dengan Produksi Tahun-T Terkecil:")
-        print("===============================================")
-        print("Nama Negara: ",namaterkecil)
-        print("Kode Negara: ",kodeterkecil)
-        print("Region Negara: ",regionterkecil)
-        print("Subregion Negara: ",subregionterkecil,"\n")
-
+        st.markdown("**Data Negara dengan Produksi Tahun-T Terkecil:**")
+        st.write("Nama Negara: ",namaterkecil)
+        st.write("Kode Negara: ",kodeterkecil)
+        st.write("Region Negara: ",regionterkecil)
+        st.write("Subregion Negara: ",subregionterkecil)
+        
 #Negara Produksi terkecil kumulatif
 datasoal3k = datasoal3[datasoal3["Kumulatif Produksi"]!=0]    #Menghilangkan nilai 0 pada data kumulatif produksi
 datasoal3k = datasoal3k.tail(1)               #Mencari negara dengan produksi kumulatif terkecil
