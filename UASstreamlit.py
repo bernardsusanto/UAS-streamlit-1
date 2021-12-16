@@ -10,7 +10,7 @@ import json
 import streamlit as st
 
 st.title("Ujian Akhir Semester Program Komputasi")
-st.caption("Bernard Susanto/12220123")
+st.caption("Dibuat oleh: Bernard Susanto/12220123")
 
 listnamanegara = list()
 listkodenegara = list()
