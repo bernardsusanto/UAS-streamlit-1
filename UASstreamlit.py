@@ -81,13 +81,13 @@ for negara_i in listkodenegara1:
     listkodenegara2.append(negara_i)                #Memasukkan ke dalam list
     listkproduksi.append(kumulatifproduksi)
 
-dfsoal3 = {"Kode Negara":listkodenegara2,"Kumulatif Produksi":listkproduksi} 
+dfsoal3 = {"Kode_Negara":listkodenegara2,"Kumulatif_Produksi":listkproduksi} 
 datasoal3 = pd.DataFrame(dfsoal3)      #Membuat 2 list tadi ke dalam dataframe
-datasoal3 = datasoal3.sort_values(["Kumulatif Produksi"],ascending = False) #Mengatur agar urutan dari kumulatif terbesar
+datasoal3 = datasoal3.sort_values(["Kumulatif_Produksi"],ascending = False) #Mengatur agar urutan dari kumulatif terbesar
 datasoal3top = datasoal3.head(int(Bnegara_k))     #Menampilkan hanya data B-besar negara berdasarkan kumulatif
 
 fig, ax = plt.subplots()
-ax.bar(datasoal3top["Kode Negara"],datasoal3top["Kumulatif Produksi"])
+ax.bar(datasoal3top["Kode_Negara"],datasoal3top["Kumulatif_Produksi"])
 ax.set_xlabel("Kode Negara", fontsize=12)
 ax.set_ylabel("Kumulatif Produksi", fontsize=12)
 st.pyplot(fig)
