@@ -49,7 +49,7 @@ ax.set_ylabel("Produksi", fontsize=12)
 st.pyplot(fig)
 
 #Soal 2
-st.subheader("Grafik Produksi Minyak Mentah B-besar Negara pada Tahun Tertentu")
+st.subheader("Grafik Produksi Terbesar Minyak Mentah Negara pada Tahun Tertentu")
 Bnegara = st.number_input("Masukkan berapa besar negara: ",min_value=1,max_value=200)
 tahuninput = st.number_input("Masukkan tahun (1971-2015): ",min_value=1971,max_value=2015)
 
@@ -68,7 +68,7 @@ ax.set_ylabel("Produksi", fontsize=12)
 st.pyplot(fig)
 
 #Soal2b
-st.subheader("Grafik Produksi Minyak Mentah B-kecil Negara pada Tahun Tertentu")
+st.subheader("Grafik Produksi Terkecil Minyak Mentah Negara pada Tahun Tertentu")
 Bnegarakecil = st.number_input("Masukkan jumlah negara terendah: ",min_value=1,max_value=200)
 tahuninputkecil = st.number_input("Masukkan tahun  (1971-2015): ",min_value=1971,max_value=2015)
 
