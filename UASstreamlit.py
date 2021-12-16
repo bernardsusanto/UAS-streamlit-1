@@ -122,7 +122,7 @@ for negara in data:                 #loop pada tiap negara di file json
         subregionterbesar = subregionterbesar[1]
         print("\nData Negara dengan Produksi Tahun-T Terbesar:")
         print("===============================================")
-        st.caption("Nama Negara: ",namaterbesar)
+        st.write("Nama Negara: ",namaterbesar)
         print("Kode Negara: ",kodeterbesar)
         print("Region Negara: ",regionterbesar)
         print("Subregion Negara: ",subregionterbesar,"\n")
