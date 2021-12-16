@@ -75,7 +75,7 @@ tahuninputkecil = st.number_input("Masukkan tahun  (1971-2015): ",min_value=1971
 dftahun2b = df_indexed[df_indexed["produksi"]!=0]    #Menghilangkan 0 pada data produksi
 dftahun2b1 = dftahun2b.loc[int(tahuninputkecil)]
 produksi_sorted1 = dftahun2b1.sort_values(["produksi"],ascending = True) #Mengatur agar urutan dari produksi terkecil
-datasoal2b = produksi_sorted1.head(int(Bnegarakecil)
+datasoal2b = produksi_sorted1.head(int(Bnegarakecil))
                                    
 colors = cmap.colors[:len(datasoal2b["kode_negara"])]
 fig, ax = plt.subplots()
