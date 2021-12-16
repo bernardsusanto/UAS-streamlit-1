@@ -50,8 +50,8 @@ st.pyplot(fig)
 
 #Soal 2
 st.subheader("Grafik Produksi Terbesar Minyak Mentah Negara pada Tahun Tertentu")
-Bnegara = st.slider("Masukkan berapa besar negara: ",min_value=1,max_value=20)
-tahuninput = st.selectbox("Pilih tahun (1971-2015): ",('1971','1972','1973','1974','1975','1976','1977','1978','1979','1980','1981','1982','1983','1984','1985','1986','1987','1988','1989','1990','1991','1992','1993','1994','1995','1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'))
+Bnegara = st.slider("Masukkan Berapa Besar Negara: ",min_value=1,max_value=20)
+tahuninput = st.selectbox("Pilih Tahun (1971-2015): ",('1971','1972','1973','1974','1975','1976','1977','1978','1979','1980','1981','1982','1983','1984','1985','1986','1987','1988','1989','1990','1991','1992','1993','1994','1995','1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'))
 
 df_indexed = df.set_index("tahun")              #Mengubah index menjadi tahun
 dftahun = df_indexed.loc[int(tahuninput)]       #Men-slice data hanya sesuai input tahun dari user
@@ -69,8 +69,8 @@ st.pyplot(fig)
 
 #Soal2b
 st.subheader("Grafik Produksi Terkecil Minyak Mentah Negara pada Tahun Tertentu")
-Bnegarakecil = st.slider("Masukkan jumlah negara terendah: ",min_value=1,max_value=20)
-tahuninputkecil = st.selectbox("Pilih tahun  (1971-2015): ",('1971','1972','1973','1974','1975','1976','1977','1978','1979','1980','1981','1982','1983','1984','1985','1986','1987','1988','1989','1990','1991','1992','1993','1994','1995','1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'))
+Bnegarakecil = st.slider("Masukkan Jumlah Negara Terendah: ",min_value=1,max_value=20)
+tahuninputkecil = st.selectbox("Pilih Tahun  (1971-2015): ",('1971','1972','1973','1974','1975','1976','1977','1978','1979','1980','1981','1982','1983','1984','1985','1986','1987','1988','1989','1990','1991','1992','1993','1994','1995','1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'))
 
 dftahun2b = df_indexed[df_indexed["produksi"]!=0]    #Menghilangkan 0 pada data produksi
 dftahun2b1 = dftahun2b.loc[int(tahuninputkecil)]
@@ -86,7 +86,7 @@ st.pyplot(fig)
 
 #Soal 3
 st.subheader("Grafik Produksi Kumulatif Minyak Mentah B-Besar Negara")
-Bnegarak = st.slider("Masukkan jumlah besar negara: ",min_value=1,max_value=20)
+Bnegarak = st.slider("Masukkan Jumlah Besar Negara: ",min_value=1,max_value=20)
 
 listkodenegara1 = list(dftahun["kode_negara"])  #Mengambil deretan kode negara dari data di soal sebelumnya
                                                 #Dikarenakan ketiadaan negara Afghanistan pada file csv yang diberikan
@@ -118,7 +118,7 @@ st.pyplot(fig)
 
 #Soal 4
 st.subheader("Informasi Tambahan")
-tahuninput1 = st.selectbox("Pilih tahun-T (1971-2015): ",('1971','1972','1973','1974','1975','1976','1977','1978','1979','1980','1981','1982','1983','1984','1985','1986','1987','1988','1989','1990','1991','1992','1993','1994','1995','1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'))
+tahuninput1 = st.selectbox("Pilih Tahun-T (1971-2015): ",('1971','1972','1973','1974','1975','1976','1977','1978','1979','1980','1981','1982','1983','1984','1985','1986','1987','1988','1989','1990','1991','1992','1993','1994','1995','1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015'))
 
 df_indexed = df.set_index("tahun")              #Mengubah index menjadi tahun
 dftahun = df_indexed.loc[int(tahuninput1)]       #Men-slice data hanya sesuai input tahun dari user
