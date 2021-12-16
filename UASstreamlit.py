@@ -69,7 +69,7 @@ st.pyplot(fig)
 
 #Soal2b
 st.subheader("Grafik Produksi Terkecil Minyak Mentah Negara pada Tahun Tertentu")
-Bnegarakecil = st.number_input("Masukkan jumlah negara terendah: ",min_value=1,max_value=200)
+Bnegarakecil = st.slider("Masukkan jumlah negara terendah: ",min_value=1,max_value=200)
 tahuninputkecil = st.number_input("Masukkan tahun  (1971-2015): ",min_value=1971,max_value=2015)
 
 dftahun2b = df_indexed[df_indexed["produksi"]!=0]    #Menghilangkan 0 pada data produksi
@@ -86,7 +86,7 @@ st.pyplot(fig)
 
 #Soal 3
 st.subheader("Grafik Produksi Kumulatif Minyak Mentah B-Besar Negara")
-Bnegarak = st.number_input("Masukkan jumlah besar negara: ",min_value=1,max_value=200)
+Bnegarak = st.slider("Masukkan jumlah besar negara: ",min_value=1,max_value=200)
 
 listkodenegara1 = list(dftahun["kode_negara"])  #Mengambil deretan kode negara dari data di soal sebelumnya
                                                 #Dikarenakan ketiadaan negara Afghanistan pada file csv yang diberikan
