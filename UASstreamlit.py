@@ -126,7 +126,6 @@ for negara in data:                 #loop pada tiap negara di file json
         st.write("Region Negara: ",regionterbesar)
         st.write("Subregion Negara: ",subregionterbesar)
         
-"""
 #Negara Produksi terbesar kumulatif
 datasoal3b = datasoal3.head(1)               #Mencari negara dengan produksi kumulatif terbesar
 datakterbesar = datasoal3b["Kode Negara"]       #Menentukan kode negaranya
@@ -146,13 +145,13 @@ for negara in data:                 #loop pada tiap negara di file json
         regionkterbesar = regionkterbesar[1]
         subregionkterbesar = listoftp[6]
         subregionkterbesar = subregionkterbesar[1]
-        print("\nData Negara dengan Produksi Kumulatif Terbesar:")
-        print("=================================================")
-        print("Nama Negara: ",namakterbesar)
-        print("Kode Negara: ",kodekterbesar)
-        print("Region Negara: ",regionkterbesar)
-        print("Subregion Negara: ",subregionkterbesar,"\n")
+        st.markdown("**Data Negara dengan Produksi Kumulatif Terbesar:**")
+        st.write("Nama Negara: ",namakterbesar)
+        st.write("Kode Negara: ",kodekterbesar)
+        st.write("Region Negara: ",regionkterbesar)
+        st.write("Subregion Negara: ",subregionkterbesar)
 
+        """
 #Negara Produksi terkecil tahun-T
 dftahun1 = dftahun[dftahun["produksi"]!=0]    #Menghilangkan 0 pada data produksi
 datacarikode2 = dftahun1.sort_values(["produksi"],ascending = True) #Mengatur agar urutan dari produksi terkecil
