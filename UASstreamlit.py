@@ -50,11 +50,11 @@ st.pyplot(fig)
 #datasoal1.plot(x='tahun',y='produksi', kind = 'line', figsize = (20,10))
 #plt.title("Grafik Produksi vs Tahun")
 #plt.show()
-"""
+
 #Soal 2
-print("\nGrafik B-besar Negara pada Tahun tertentu")
-Bnegara = input("Masukkan berapa besar negara: ")
-tahuninput = input("Masukkan tahun (1971-2015): ")
+st.subheader("Grafik B-besar Negara pada Tahun Tertentu")
+Bnegara = st.number_input("Masukkan berapa besar negara: ",min_value=1,max_value=200)
+tahuninput = st.number_input("Masukkan tahun (1971-2015): ",min_value=1971,max_value=2015)
 
 df_indexed = df.set_index("tahun")              #Mengubah index menjadi tahun
 dftahun = df_indexed.loc[int(tahuninput)]       #Men-slice data hanya sesuai input tahun dari user
@@ -65,6 +65,7 @@ datasoal2.plot(x='kode_negara',y='produksi', kind = 'bar', figsize = (20,10))
 plt.title("Grafik Produksi B-Besar Negara")
 plt.show()
 
+"""
 #Soal 3
 print("\nGrafik B-Besar Negara Secara Produksi Kumulatif")
 Bnegara_k = input("Masukkan berapa besar negara: ")
