@@ -204,15 +204,13 @@ for negara in data:                 #loop pada tiap negara di file json
         st.write("Region Negara: ",regionkterkecil)
         st.write("Subregion Negara: ",subregionkterkecil)
 
-        """
 #Negara dengan Produksi 0 Tahun-T
 df0produksi = dftahun.sort_values(["produksi"],ascending = True)
 df0produksi_indexed = df0produksi.set_index("produksi")  
 df0produksi1 = df0produksi_indexed.loc["0"]
 listnegara0 = list(df0produksi1["kode_negara"])
 
-print("\nData Negara dengan Produksi 0 Tahun-T:")
-print("========================================")
+st.markdown("**Data Negara dengan Produksi 0 Tahun-T:**")
 
 for negara0 in listnegara0:         #loop pada negara0 di list negara dengan produksi 0 tahun T
     for negara in data:                 #loop pada tiap negara di file json
@@ -229,11 +227,12 @@ for negara0 in listnegara0:         #loop pada negara0 di list negara dengan pro
             region0 = region0[1]
             subregion0 = listoftp[6]
             subregion0 = subregion0[1]
-            print("Nama Negara: ",nama0)
-            print("Kode Negara: ",negara0)
-            print("Region Negara: ",region0)
-            print("Subregion Negara: ",subregion0,"\n")
+            st.write("Nama Negara: ",nama0)
+            st.write("Kode Negara: ",negara0)
+            st.write("Region Negara: ",region0)
+            st.write("Subregion Negara: ",subregion0,"\n")
 
+            """
 #Negara Produksi 0 Kumulatif
 df0kproduksi_indexed = datasoal3.set_index("Kumulatif Produksi")  
 df0kproduksi1 = df0kproduksi_indexed.loc[0]
