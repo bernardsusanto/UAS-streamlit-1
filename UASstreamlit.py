@@ -67,6 +67,25 @@ ax.set_xlabel("Kode Negara", fontsize=12)
 ax.set_ylabel("Produksi", fontsize=12)
 st.pyplot(fig)
 
+#Soal2b
+st.subheader("Grafik Produksi Minyak Mentah B-kecil Negara pada Tahun Tertentu")
+Bnegarakecil = st.number_input("Masukkan jumlah negara terendah: ",min_value=1,max_value=200)
+tahuninputkecil = st.number_input("Masukkan tahun  (1971-2015): ",min_value=1971,max_value=2015)
+
+dftahun2b = df_indexed[df_indexed["produksi"]!=0]    #Menghilangkan 0 pada data produksi
+dftahun2b1 = dftahun2b.loc[int(tahuninputkecil)]
+produksi_sorted1 = dftahun2b1.sort_values(["produksi"],ascending = True) #Mengatur agar urutan dari produksi terkecil
+datasoal2b = produksi_sorted1.head(int(Bnegarakecil)
+                                   
+cmap_name = 'tab20'
+cmap = cm.get_cmap(cmap_name)
+colors = cmap.colors[:len(datasoal2b["kode_negara"])]
+fig, ax = plt.subplots()
+ax.bar(datasoal2b["kode_negara"], datasoal2b["produksi"],color=colors)
+ax.set_xlabel("Kode Negara", fontsize=12)
+ax.set_ylabel("Produksi", fontsize=12)
+st.pyplot(fig)
+
 #Soal 3
 st.subheader("Grafik Produksi Kumulatif Minyak Mentah B-Besar Negara")
 Bnegarak = st.number_input("Masukkan jumlah besar negara: ",min_value=1,max_value=200)
@@ -162,7 +181,7 @@ dftahun1 = dftahun[dftahun["produksi"]!=0]    #Menghilangkan 0 pada data produks
 datacarikode2 = dftahun1.sort_values(["produksi"],ascending = True) #Mengatur agar urutan dari produksi terkecil
 datacarikode2 = datacarikode2.head(1)                #negara dengan produksi terkecil di tahun tertentu
 datacarikode2 = datacarikode2["kode_negara"]
-kodetercari2 = datacarikode2.values[0]    #Mendapatkan kode negara dengan produksi terbesar
+kodetercari2 = datacarikode2.values[0]    #Mendapatkan kode negara dengan produksi terkecil
 
 for negara in data:                 #loop pada tiap negara di file json
     listoftp = [(kategori,hasil) for kategori,hasil in negara.items()] #mengubah dictionaries menjadi list of tuples
