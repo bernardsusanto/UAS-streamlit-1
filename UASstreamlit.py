@@ -29,7 +29,6 @@ for negara in data:                 #loop pada tiap negara di file json
 kamus = dict(zip(listnamanegara,listkodenegara))        #memasangkan masing-masing nama dan kode negara pada dictionary
 
 #Soal 1
-masukanuser = "Indonesia"
 st.subheader("Grafik Produksi Minyak Mentah Negara pada Setiap Tahun")
 masukanuser = st.text_input("Masukkan Nama Negara: ")
 
