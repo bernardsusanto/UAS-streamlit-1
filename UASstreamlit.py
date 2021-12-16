@@ -66,7 +66,7 @@ st.pyplot(fig)
 
 #Soal 3
 st.subheader("Grafik Produksi Kumulatif Minyak Mentah B-Besar Negara")
-Bnegara_k = st.number_input("Masukkan berapa besar negara: ",min_value=1,max_value=200)
+Bnegarak = st.number_input("Masukkan berapa besar negara: ",min_value=1,max_value=200)
 
 listkodenegara1 = list(dftahun["kode_negara"])  #Mengambil deretan kode negara dari data di soal sebelumnya
                                                 #Dikarenakan ketiadaan negara Afghanistan pada file csv yang diberikan
@@ -84,7 +84,7 @@ for negara_i in listkodenegara1:
 dfsoal3 = {"Kode_Negara":listkodenegara2,"Kumulatif_Produksi":listkproduksi} 
 datasoal3 = pd.DataFrame(dfsoal3)      #Membuat 2 list tadi ke dalam dataframe
 datasoal3 = datasoal3.sort_values(["Kumulatif_Produksi"],ascending = False) #Mengatur agar urutan dari kumulatif terbesar
-datasoal3top = datasoal3.head(int(Bnegara_k))     #Menampilkan hanya data B-besar negara berdasarkan kumulatif
+datasoal3top = datasoal3.head(int(Bnegarak))     #Menampilkan hanya data B-besar negara berdasarkan kumulatif
 
 fig, ax = plt.subplots()
 ax.bar(datasoal3top["Kode_Negara"],datasoal3top["Kumulatif_Produksi"])
