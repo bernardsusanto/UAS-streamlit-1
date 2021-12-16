@@ -77,8 +77,6 @@ dftahun2b1 = dftahun2b.loc[int(tahuninputkecil)]
 produksi_sorted1 = dftahun2b1.sort_values(["produksi"],ascending = True) #Mengatur agar urutan dari produksi terkecil
 datasoal2b = produksi_sorted1.head(int(Bnegarakecil)
                                    
-cmap_name = 'tab20'
-cmap = cm.get_cmap(cmap_name)
 colors = cmap.colors[:len(datasoal2b["kode_negara"])]
 fig, ax = plt.subplots()
 ax.bar(datasoal2b["kode_negara"], datasoal2b["produksi"],color=colors)
