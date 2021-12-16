@@ -59,7 +59,7 @@ produksi_sorted = dftahun.sort_values(["produksi"], ascending = False)  #menguru
 datasoal2 = produksi_sorted.head(int(Bnegara))  #mengambil data B-besar negara inputan user
 
 fig, ax = plt.subplots()
-ax.bar(datasoal1["kode_negara"], datasoal1["produksi"])
+ax.bar(datasoal2["kode_negara"], datasoal2["produksi"])
 ax.set_xlabel("Kode Negara", fontsize=12)
 ax.set_ylabel("Produksi", fontsize=12)
 st.pyplot(fig)
