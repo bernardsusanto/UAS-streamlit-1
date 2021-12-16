@@ -92,10 +92,10 @@ ax.set_xlabel("Kode Negara", fontsize=12)
 ax.set_ylabel("Kumulatif Produksi", fontsize=12)
 st.pyplot(fig)
 
-"""
+
 #Soal 4
-print("\nInformasi tambahan")
-tahuninput1 = input("Masukkan tahun(1971-2015): ")
+st.subheader("Informasi Tambahan")
+tahuninput1 = st.number_input("Masukkan tahun(1971-2015): ",min_value=1971,max_value=2015)
 
 df_indexed = df.set_index("tahun")              #Mengubah index menjadi tahun
 dftahun = df_indexed.loc[int(tahuninput1)]       #Men-slice data hanya sesuai input tahun dari user
@@ -122,11 +122,12 @@ for negara in data:                 #loop pada tiap negara di file json
         subregionterbesar = subregionterbesar[1]
         print("\nData Negara dengan Produksi Tahun-T Terbesar:")
         print("===============================================")
-        print("Nama Negara: ",namaterbesar)
+        st.caption("Nama Negara: ",namaterbesar)
         print("Kode Negara: ",kodeterbesar)
         print("Region Negara: ",regionterbesar)
         print("Subregion Negara: ",subregionterbesar,"\n")
-
+        
+"""
 #Negara Produksi terbesar kumulatif
 datasoal3b = datasoal3.head(1)               #Mencari negara dengan produksi kumulatif terbesar
 datakterbesar = datasoal3b["Kode Negara"]       #Menentukan kode negaranya
