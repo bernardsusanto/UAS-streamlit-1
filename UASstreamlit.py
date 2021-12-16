@@ -43,7 +43,7 @@ df_indexed = df.set_index("kode_negara")        #Mengubah index menjadi kode neg
 datasoal1 = df_indexed.loc[kodeinput]            #Men-slice data hanya sesuai input negara dari user
 
 fig, ax = plt.subplots()
-ax.bar(datasoal1["tahun"], datasoal1["produksi"])
+ax.line(datasoal1["tahun"], datasoal1["produksi"])
 ax.set_xlabel("Tahun", fontsize=12)
 ax.set_ylabel("Produksi", fontsize=12)
 st.pyplot(fig)
