@@ -236,19 +236,21 @@ for negara0 in listnegara0:         #loop pada negara0 di list negara dengan pro
             subregion0 = subregion0[1]
             listsubregion0.append(subregion0)
 
-dfsoal40 = {"Nama negara":listnama0,"Kode negara":listkode0, "Region negara":listregion0,"Subregion negara":listsubregion0} #membuat 4 list ke bentuk dataframe
+dfsoal40 = {"Nama negara":listnama0,"Kode Negara":listkode0, "Region Negara":listregion0,"Subregion Negara":listsubregion0} #membuat 4 list ke bentuk dataframe
 datasoal40 = pd.DataFrame(dfsoal40)
 datasoal40jadi = datasoal40.set_index("Nama negara") 
 st.dataframe(datasoal40jadi)
 
-"""
 #Negara Produksi 0 Kumulatif
 df0kproduksi_indexed = datasoal3.set_index("Kumulatif Produksi")  
 df0kproduksi1 = df0kproduksi_indexed.loc[0]
-listnegarak0 = list(df0kproduksi1["Kode Negara"])
+listnegarak0 = list(df0kproduksi1["Kode_Negara"])
 
-print("\nData Negara dengan Produksi Kumulatif 0:")
-print("==========================================")
+st.markdown("**Data Negara dengan Produksi Kumulatif 0:**")
+listnama0k = []
+listkode0k = []
+listregion0k = []
+listsubregion0k = []
 
 for negarak0 in listnegarak0:         #loop pada negara0 di list negara dengan produksi kumulatif 0
     for negara in data:                 #loop pada tiap negara di file json
@@ -259,14 +261,18 @@ for negarak0 in listnegarak0:         #loop pada negara0 di list negara dengan p
         else:
             nama0k = listoftp[0]
             nama0k = nama0k[1]
+            listnama0k.append(nama0k)
             kode0k = listoftp[2]
             kode0k = kode0k[1]
+            listkode0k.append(kode0k)
             region0k = listoftp[5]
             region0k = region0k[1]
+            listregion0k.append(region0k)
             subregion0k = listoftp[6]
             subregion0k = subregion0k[1]
-            print("Nama Negara: ",nama0k)
-            print("Kode Negara: ",kode0k)
-            print("Region Negara: ",region0k)
-            print("Subregion Negara: ",subregion0k,"\n")
-            """
+            listsubregion0k.append(subregion0k)
+            
+dfsoal40k = {"Nama Negara":listnama0k,"Kode Negara":listkode0k, "Region Negara":listregion0k,"Subregion Negara":listsubregion0k} 
+datasoal40k = pd.DataFrame(dfsoal40k)
+datasoal40kjadi = datasoal40k.set_index("Nama Negara")
+st.dataframe(datasoal40kjadi)
