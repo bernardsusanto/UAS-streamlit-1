@@ -44,12 +44,9 @@ datasoal1 = df_indexed.loc[kodeinput]            #Men-slice data hanya sesuai in
 
 fig, ax = plt.subplots()
 ax.bar(datasoal1["tahun"], datasoal1["produksi"])
-ax.set_xlabel("tahun", fontsize=12)
-ax.set_ylabel("produksi", fontsize=12)
+ax.set_xlabel("Tahun", fontsize=12)
+ax.set_ylabel("Produksi", fontsize=12)
 st.pyplot(fig)
-#datasoal1.plot(x='tahun',y='produksi', kind = 'line', figsize = (20,10))
-#plt.title("Grafik Produksi vs Tahun")
-#plt.show()
 
 #Soal 2
 st.subheader("Grafik B-besar Negara pada Tahun Tertentu")
@@ -64,6 +61,12 @@ datasoal2 = produksi_sorted.head(int(Bnegara))  #mengambil data B-besar negara i
 datasoal2.plot(x='kode_negara',y='produksi', kind = 'bar', figsize = (20,10))
 plt.title("Grafik Produksi B-Besar Negara")
 plt.show()
+
+fig, ax = plt.subplots()
+ax.bar(datasoal1["kode_negara"], datasoal1["produksi"])
+ax.set_xlabel("Kode Negara", fontsize=12)
+ax.set_ylabel("Produksi", fontsize=12)
+st.pyplot(fig)
 
 """
 #Soal 3
