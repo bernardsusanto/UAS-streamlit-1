@@ -179,7 +179,7 @@ for negara in data:                 #loop pada tiap negara di file json
         st.write("Subregion Negara: ",subregionterkecil)
         
 #Negara Produksi terkecil kumulatif
-datasoal3k = datasoal3[datasoal3["Kumulatif Produksi"]!=0]    #Menghilangkan nilai 0 pada data kumulatif produksi
+datasoal3k = datasoal3[datasoal3["Kumulatif_Produksi"]!=0]    #Menghilangkan nilai 0 pada data kumulatif produksi
 datasoal3k = datasoal3k.tail(1)               #Mencari negara dengan produksi kumulatif terkecil
 datakterkecil = datasoal3k["Kode Negara"]       #Menentukan kode negaranya
 kodetercari3 = datakterkecil.values[0]      #Mendapat kode negara dengan kumulatif produksi terkecil
