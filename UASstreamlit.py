@@ -58,10 +58,6 @@ dftahun = df_indexed.loc[int(tahuninput)]       #Men-slice data hanya sesuai inp
 produksi_sorted = dftahun.sort_values(["produksi"], ascending = False)  #mengurutkan data produksi dari terbesar ke terkecil
 datasoal2 = produksi_sorted.head(int(Bnegara))  #mengambil data B-besar negara inputan user
 
-datasoal2.plot(x='kode_negara',y='produksi', kind = 'bar', figsize = (20,10))
-plt.title("Grafik Produksi B-Besar Negara")
-plt.show()
-
 fig, ax = plt.subplots()
 ax.bar(datasoal1["kode_negara"], datasoal1["produksi"])
 ax.set_xlabel("Kode Negara", fontsize=12)
