@@ -50,7 +50,7 @@ st.pyplot(fig)
 
 #Soal 2
 st.subheader("Grafik Produksi Terbesar Minyak Mentah Negara pada Tahun Tertentu")
-Bnegara = st.number_input("Masukkan berapa besar negara: ",min_value=1,max_value=200)
+Bnegara = st.slider("Masukkan berapa besar negara: ",min_value=1,max_value=200)
 tahuninput = st.number_input("Masukkan tahun (1971-2015): ",min_value=1971,max_value=2015)
 
 df_indexed = df.set_index("tahun")              #Mengubah index menjadi tahun
