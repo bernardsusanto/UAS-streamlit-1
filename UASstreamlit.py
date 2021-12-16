@@ -242,7 +242,7 @@ datasoal40jadi = datasoal40.set_index("Nama negara")
 st.dataframe(datasoal40jadi)
 
 #Negara Produksi 0 Kumulatif
-df0kproduksi_indexed = datasoal3.set_index("Kumulatif Produksi")  
+df0kproduksi_indexed = datasoal3.set_index("Kumulatif_Produksi")  
 df0kproduksi1 = df0kproduksi_indexed.loc[0]
 listnegarak0 = list(df0kproduksi1["Kode_Negara"])
 
