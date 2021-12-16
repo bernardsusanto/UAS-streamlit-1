@@ -172,13 +172,12 @@ for negara in data:                 #loop pada tiap negara di file json
         regionterkecil = regionterkecil[1]
         subregionterkecil = listoftp[6]
         subregionterkecil = subregionterkecil[1]
-        st.markdown("**Data Negara dengan Produksi Tahun-T Terkecil:**")
+        st.markdown("**Data Negara dengan Produksi Tahun-T Terkecil (Bukan 0):**")
         st.write("Nama Negara: ",namaterkecil)
         st.write("Kode Negara: ",kodeterkecil)
         st.write("Region Negara: ",regionterkecil)
         st.write("Subregion Negara: ",subregionterkecil)
         
-"""
 #Negara Produksi terkecil kumulatif
 datasoal3k = datasoal3[datasoal3["Kumulatif Produksi"]!=0]    #Menghilangkan nilai 0 pada data kumulatif produksi
 datasoal3k = datasoal3k.tail(1)               #Mencari negara dengan produksi kumulatif terkecil
@@ -199,13 +198,13 @@ for negara in data:                 #loop pada tiap negara di file json
         regionkterkecil = regionkterkecil[1]
         subregionkterkecil = listoftp[6]
         subregionkterkecil = subregionkterkecil[1]
-        print("\nData Negara dengan Produksi Kumulatif Terkecil:")
-        print("=================================================")
-        print("Nama Negara: ",namakterkecil)
-        print("Kode Negara: ",kodekterkecil)
-        print("Region Negara: ",regionkterkecil)
-        print("Subregion Negara: ",subregionkterkecil,"\n")
+        st.markdown("**Data Negara dengan Produksi Kumulatif Terkecil (Bukan 0):**")
+        st.write("Nama Negara: ",namakterkecil)
+        st.write("Kode Negara: ",kodekterkecil)
+        st.write("Region Negara: ",regionkterkecil)
+        st.write("Subregion Negara: ",subregionkterkecil)
 
+        """
 #Negara dengan Produksi 0 Tahun-T
 df0produksi = dftahun.sort_values(["produksi"],ascending = True)
 df0produksi_indexed = df0produksi.set_index("produksi")  
